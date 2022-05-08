@@ -5,6 +5,9 @@
     <div class="album-list">
         @include('albums-list')
     </div>
+    <div class="d-flex justify-content-center">
+        {!! $albums->links() !!}
+    </div>
 
 {{--            <div class="card mb-3 bg-light">--}}
 {{--                <div class="d-flex flex-row">--}}

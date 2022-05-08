@@ -21,6 +21,4 @@
     <p class="mb-0 text-muted text-center">Пусто</p>
 @endif
 
-<div class="d-flex justify-content-center">
-    {!! $albums->links() !!}
-</div>
+
