@@ -1,0 +1,40 @@
+$extraDark: #181A28;
+$dark: #2A2E45;
+$light: #343956;
+$green: #3BCEAC;
+
+//.card{
+//    font-size: 0.8rem;
+//    border:0;
+//    border-radius: 1.25rem;
+//    box-shadow: 0 10px 20px 2px $extraDark;
+//    color: #FFF;
+//
+//    height: 300px;
+//    overflow:hidden;
+//
+//    h1,h2,h3,h4,h5,h6{
+//        font-weight:bold;
+//    }
+//    a{
+//        color:$green;
+//    }
+//    img{
+//        width:200%;
+//        height:200%;
+//        object-fit:cover;
+//
+//        position:absolute;
+//        top:50%;
+//        left:50%;
+//        transform: translate(-50%,-50%);
+//
+//    }
+//    .card-img-overlay{
+//        background: rgba(0,0,0,0.5)
+//    }
+//}
+
+body {
+    background-color: #fff !important;
+}
