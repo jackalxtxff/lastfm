@@ -31,3 +31,8 @@ Auth::routes();
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::resource('albums', AlbumController::class);
+
+//Для хостинга для создания линка ком артизан
+//Route::get('/linkstorage', function () {
+//    Artisan::call('storage:link');
+//});

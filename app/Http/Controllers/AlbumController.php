@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Album;
 use App\Models\Log;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -147,6 +148,11 @@ class AlbumController extends Controller
      */
     public function edit(Album $album)
     {
+        $user = Auth::user();
+        if ($user->cannot('update', $album)) {
+            return redirect()->back();
+        }
+
         return view('addingForm', [
             'album' => $album
         ]);
@@ -161,6 +167,10 @@ class AlbumController extends Controller
      */
     public function update(Request $request, Album $album)
     {
+        $user = Auth::user();
+        if ($user->cannot('update', $album)) {
+            return redirect()->back();
+        }
         if ($request->ajax())
         {
             if ($request->image_text == 'true') {
@@ -244,6 +254,10 @@ class AlbumController extends Controller
      */
     public function destroy(Album $album)
     {
+        $user = Auth::user();
+        if ($user->cannot('delete', $album)) {
+            return redirect()->back();
+        }
         $paginate = 4;
 
         if ($album->delete()) {
